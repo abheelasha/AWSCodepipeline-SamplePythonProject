@@ -3,5 +3,9 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi There! Welcome to my channel.ABHILASHA"
+echo "Stopping the container forcefully"
+
+containerid=`sudo docker ps | awk -F " " '{print $1}'`
+
+docker rm -f $containerid
 
